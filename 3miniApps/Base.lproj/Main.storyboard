@@ -25,6 +25,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Fill view with Square">
                                             <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="m22-Zp-z0R" kind="showDetail" id="Com-VI-CiT"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4xu-wH-gPk">
                                         <rect key="frame" x="0.0" y="86" width="293" height="51"/>
@@ -56,7 +59,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-113.04347826086958" y="35.491071428571423"/>
+            <point key="canvasLocation" x="-474" y="737"/>
         </scene>
         <!--Circle Cat View Controller-->
         <scene sceneID="hbe-G6-QiI">
@@ -92,6 +95,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lTN-Mj-kdv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="650.72463768115949" y="34.821428571428569"/>
+        </scene>
+        <!--Fill View With SquareVC-->
+        <scene sceneID="aUq-cn-Yac">
+            <objects>
+                <viewController id="m22-Zp-z0R" customClass="FillViewWithSquareVC" customModule="_miniApps" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eGM-yf-QCr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PwP-9V-cOn">
+                                <rect key="frame" x="166" y="757" width="82" height="51"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="FILL">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="fillButtonPressed:" destination="m22-Zp-z0R" eventType="touchUpInside" id="fYO-yw-fNy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0DJ-g9-cNY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PwP-9V-cOn" firstAttribute="centerX" secondItem="eGM-yf-QCr" secondAttribute="centerX" id="00V-fy-hlT"/>
+                            <constraint firstItem="0DJ-g9-cNY" firstAttribute="bottom" secondItem="PwP-9V-cOn" secondAttribute="bottom" constant="34" id="iZF-zc-2pP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="fillButton" destination="PwP-9V-cOn" id="S81-ul-XNV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HNW-7z-6vx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="651" y="737"/>
         </scene>
     </scenes>
     <resources>
