@@ -13,6 +13,7 @@
 		FAEF56EF290B2E1500BBDE41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAEF56ED290B2E1500BBDE41 /* Main.storyboard */; };
 		FAEF56F1290B2E1500BBDE41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAEF56F0290B2E1500BBDE41 /* Assets.xcassets */; };
 		FAEF56F4290B2E1500BBDE41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAEF56F2290B2E1500BBDE41 /* LaunchScreen.storyboard */; };
+		FAEF56FC290B644100BBDE41 /* CircleCatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEF56FB290B644100BBDE41 /* CircleCatViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		FAEF56F0290B2E1500BBDE41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAEF56F3290B2E1500BBDE41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAEF56F5290B2E1500BBDE41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAEF56FB290B644100BBDE41 /* CircleCatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleCatViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				FAEF56F0290B2E1500BBDE41 /* Assets.xcassets */,
 				FAEF56F2290B2E1500BBDE41 /* LaunchScreen.storyboard */,
 				FAEF56F5290B2E1500BBDE41 /* Info.plist */,
+				FAEF56FB290B644100BBDE41 /* CircleCatViewController.swift */,
 			);
 			path = 3miniApps;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAEF56EC290B2E1500BBDE41 /* ViewController.swift in Sources */,
+				FAEF56FC290B644100BBDE41 /* CircleCatViewController.swift in Sources */,
 				FAEF56E8290B2E1500BBDE41 /* AppDelegate.swift in Sources */,
 				FAEF56EA290B2E1500BBDE41 /* SceneDelegate.swift in Sources */,
 			);
