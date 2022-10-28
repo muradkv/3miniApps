@@ -35,6 +35,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Circle Мove">
                                             <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="4ro-DY-MNE" kind="showDetail" id="F0n-eW-BGu"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgV-Iv-fvc">
                                         <rect key="frame" x="0.0" y="172" width="293" height="51"/>
@@ -94,7 +97,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lTN-Mj-kdv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="650.72463768115949" y="34.821428571428569"/>
+            <point key="canvasLocation" x="651" y="1485"/>
         </scene>
         <!--Fill View With SquareVC-->
         <scene sceneID="aUq-cn-Yac">
@@ -127,6 +130,80 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HNW-7z-6vx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="651" y="-68"/>
+        </scene>
+        <!--Circle Move View Controller-->
+        <scene sceneID="Ebr-zf-04j">
+            <objects>
+                <viewController id="4ro-DY-MNE" customClass="CircleMoveViewController" customModule="_miniApps" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l4v-B9-YtD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vg7-BJ-nSW">
+                                <rect key="frame" x="175.5" y="681" width="63.5" height="51"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Up">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="upPressed:" destination="4ro-DY-MNE" eventType="touchUpInside" id="Rup-Xu-1yx"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="148" translatesAutoresizingMaskIntoConstraints="NO" id="u6n-AP-4BU">
+                                <rect key="frame" x="20" y="736" width="374" height="51"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="spj-XU-vXV">
+                                        <rect key="frame" x="0.0" y="0.0" width="113" height="51"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Left">
+                                            <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="leftPressed:" destination="4ro-DY-MNE" eventType="touchUpInside" id="90R-EP-s0E"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GNa-8J-pb5">
+                                        <rect key="frame" x="261" y="0.0" width="113" height="51"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Right">
+                                            <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="rightPressed:" destination="4ro-DY-MNE" eventType="touchUpInside" id="xep-t8-uDC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Htd-fq-H9N">
+                                <rect key="frame" x="156" y="791" width="102" height="51"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Down">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="downPressed:" destination="4ro-DY-MNE" eventType="touchUpInside" id="aLf-71-xOR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GmG-eG-4lX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="u6n-AP-4BU" firstAttribute="leading" secondItem="GmG-eG-4lX" secondAttribute="leading" constant="20" id="Kgq-Qg-4Sc"/>
+                            <constraint firstItem="vg7-BJ-nSW" firstAttribute="centerX" secondItem="l4v-B9-YtD" secondAttribute="centerX" id="Knp-GW-KaZ"/>
+                            <constraint firstItem="u6n-AP-4BU" firstAttribute="top" secondItem="vg7-BJ-nSW" secondAttribute="bottom" constant="4" id="PDX-nX-2Hv"/>
+                            <constraint firstItem="GmG-eG-4lX" firstAttribute="trailing" secondItem="u6n-AP-4BU" secondAttribute="trailing" constant="20" id="dFe-0Y-yKJ"/>
+                            <constraint firstItem="Htd-fq-H9N" firstAttribute="top" secondItem="u6n-AP-4BU" secondAttribute="bottom" constant="4" id="gpJ-fT-XVQ"/>
+                            <constraint firstItem="GmG-eG-4lX" firstAttribute="bottom" secondItem="Htd-fq-H9N" secondAttribute="bottom" id="lnB-u3-p7M"/>
+                            <constraint firstItem="Htd-fq-H9N" firstAttribute="centerX" secondItem="l4v-B9-YtD" secondAttribute="centerX" id="yjQ-Pb-dMv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="upButton" destination="vg7-BJ-nSW" id="qdS-fS-sRt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jgp-8t-xYj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="651" y="737"/>
         </scene>

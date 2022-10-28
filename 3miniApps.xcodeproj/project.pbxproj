@@ -15,6 +15,7 @@
 		FAEF56F4290B2E1500BBDE41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAEF56F2290B2E1500BBDE41 /* LaunchScreen.storyboard */; };
 		FAEF56FC290B644100BBDE41 /* CircleCatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEF56FB290B644100BBDE41 /* CircleCatViewController.swift */; };
 		FAEF56FE290C382D00BBDE41 /* FillViewWithSquareVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEF56FD290C382D00BBDE41 /* FillViewWithSquareVC.swift */; };
+		FAEF5700290C901F00BBDE41 /* CircleMoveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEF56FF290C901F00BBDE41 /* CircleMoveViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		FAEF56F5290B2E1500BBDE41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAEF56FB290B644100BBDE41 /* CircleCatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleCatViewController.swift; sourceTree = "<group>"; };
 		FAEF56FD290C382D00BBDE41 /* FillViewWithSquareVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillViewWithSquareVC.swift; sourceTree = "<group>"; };
+		FAEF56FF290C901F00BBDE41 /* CircleMoveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleMoveViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				FAEF56F5290B2E1500BBDE41 /* Info.plist */,
 				FAEF56FB290B644100BBDE41 /* CircleCatViewController.swift */,
 				FAEF56FD290C382D00BBDE41 /* FillViewWithSquareVC.swift */,
+				FAEF56FF290C901F00BBDE41 /* CircleMoveViewController.swift */,
 			);
 			path = 3miniApps;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAEF56FE290C382D00BBDE41 /* FillViewWithSquareVC.swift in Sources */,
+				FAEF5700290C901F00BBDE41 /* CircleMoveViewController.swift in Sources */,
 				FAEF56EC290B2E1500BBDE41 /* ViewController.swift in Sources */,
 				FAEF56FC290B644100BBDE41 /* CircleCatViewController.swift in Sources */,
 				FAEF56E8290B2E1500BBDE41 /* AppDelegate.swift in Sources */,
