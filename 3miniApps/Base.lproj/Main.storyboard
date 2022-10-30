@@ -108,7 +108,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PwP-9V-cOn">
-                                <rect key="frame" x="166" y="757" width="82" height="51"/>
+                                <rect key="frame" x="166.5" y="757" width="81.5" height="51"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="FILL">
                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
@@ -117,21 +117,57 @@
                                     <action selector="fillButtonPressed:" destination="m22-Zp-z0R" eventType="touchUpInside" id="fYO-yw-fNy"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="IGf-q6-aMN">
+                                <rect key="frame" x="142" y="668" width="130" height="79"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="KJY-Dk-vLL">
+                                        <rect key="frame" x="0.0" y="0.0" width="130" height="44"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Side of square" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ue-lj-l7l">
+                                                <rect key="frame" x="0.0" y="0.0" width="130" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iDN-x9-MXJ">
+                                                <rect key="frame" x="0.0" y="23.5" width="130" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="g9a-x2-t3b">
+                                        <rect key="frame" x="-2" y="49" width="134" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="130" id="Z7l-5r-iKd"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="sliderDidSlide:" destination="m22-Zp-z0R" eventType="valueChanged" id="BBu-2K-Enc"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0DJ-g9-cNY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="PwP-9V-cOn" firstAttribute="centerX" secondItem="eGM-yf-QCr" secondAttribute="centerX" id="00V-fy-hlT"/>
+                            <constraint firstItem="PwP-9V-cOn" firstAttribute="top" secondItem="IGf-q6-aMN" secondAttribute="bottom" constant="10" id="HVk-12-BAk"/>
                             <constraint firstItem="0DJ-g9-cNY" firstAttribute="bottom" secondItem="PwP-9V-cOn" secondAttribute="bottom" constant="34" id="iZF-zc-2pP"/>
+                            <constraint firstItem="IGf-q6-aMN" firstAttribute="centerX" secondItem="eGM-yf-QCr" secondAttribute="centerX" id="ubI-t2-Vl0"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="fillButton" destination="PwP-9V-cOn" id="S81-ul-XNV"/>
+                        <outlet property="slideStackView" destination="IGf-q6-aMN" id="Hrw-Xn-3ou"/>
+                        <outlet property="slider" destination="g9a-x2-t3b" id="4w2-Xj-Pda"/>
+                        <outlet property="valueSlider" destination="iDN-x9-MXJ" id="T0d-a0-d9S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HNW-7z-6vx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="651" y="-68"/>
+            <point key="canvasLocation" x="650.72463768115949" y="-68.303571428571431"/>
         </scene>
         <!--Circle Move View Controller-->
         <scene sceneID="Ebr-zf-04j">

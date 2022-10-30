@@ -9,34 +9,51 @@ import UIKit
 
 class FillViewWithSquareVC: UIViewController {
     @IBOutlet var fillButton: UIButton!
+    @IBOutlet var valueSlider: UILabel!
+    @IBOutlet var slider: UISlider!
+    @IBOutlet var slideStackView: UIStackView!
     
     var position: (x: Int, y: Int) = (0, 0)
+    var sideSquare: Float = 50
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        configureSlider(with: slider)
     }
 
     @IBAction func fillButtonPressed(_ sender: UIButton) {
-        let square = UIView()
-        square.frame = CGRect(x: position.x, y: position.y, width: 100, height: 100)
-        square.backgroundColor = UIColor.systemPurple
-        let widthSquare = Int(square.frame.width)
-        let heightSquare = Int(square.frame.height)
-        let bottomLine = Int(view.frame.height - (view.frame.height - fillButton.frame.origin.y))
+        slideStackView.isHidden = true
         
-        if (position.y + heightSquare) > bottomLine {
+        let square = UIView()
+        square.frame = CGRect(x: position.x, y: position.y, width: Int(sideSquare), height: Int(sideSquare))
+        square.backgroundColor = RandomColor.makeColor()
+        
+        if (position.y + Int(sideSquare)) > Int(fillButton.frame.origin.y) {
             return
         }
         
-        position.x += widthSquare
+        position.x += Int(sideSquare)
         
-        if (position.x + widthSquare) > Int(view.frame.width) {
+        if (position.x + Int(sideSquare)) > Int(view.frame.width) {
             position.x = 0
-            position.y += heightSquare
+            position.y += Int(sideSquare)
         }
 
         view.addSubview(square)
+    }
+    
+    @IBAction func sliderDidSlide(_ sender: UISlider) {
+        let value = sender.value
+        sideSquare = value
+        valueSlider.text = String(format: "%.f", value)
+    }
+    
+    func configureSlider(with slider: UISlider) {
+        valueSlider.text = "\(Int(sideSquare))"
+        slider.maximumValue = Float(view.frame.width)
+        slider.minimumValue = 1
+        slider.value = sideSquare
     }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FAE60C77290EB7770087DAA1 /* RandomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE60C76290EB7770087DAA1 /* RandomColor.swift */; };
 		FAEF56E8290B2E1500BBDE41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEF56E7290B2E1500BBDE41 /* AppDelegate.swift */; };
 		FAEF56EA290B2E1500BBDE41 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEF56E9290B2E1500BBDE41 /* SceneDelegate.swift */; };
 		FAEF56EC290B2E1500BBDE41 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEF56EB290B2E1500BBDE41 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FAE60C76290EB7770087DAA1 /* RandomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomColor.swift; sourceTree = "<group>"; };
 		FAEF56E4290B2E1500BBDE41 /* 3miniApps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 3miniApps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAEF56E7290B2E1500BBDE41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAEF56E9290B2E1500BBDE41 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				FAEF56FB290B644100BBDE41 /* CircleCatViewController.swift */,
 				FAEF56FD290C382D00BBDE41 /* FillViewWithSquareVC.swift */,
 				FAEF56FF290C901F00BBDE41 /* CircleMoveViewController.swift */,
+				FAE60C76290EB7770087DAA1 /* RandomColor.swift */,
 			);
 			path = 3miniApps;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 				FAEF56FC290B644100BBDE41 /* CircleCatViewController.swift in Sources */,
 				FAEF56E8290B2E1500BBDE41 /* AppDelegate.swift in Sources */,
 				FAEF56EA290B2E1500BBDE41 /* SceneDelegate.swift in Sources */,
+				FAE60C77290EB7770087DAA1 /* RandomColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
