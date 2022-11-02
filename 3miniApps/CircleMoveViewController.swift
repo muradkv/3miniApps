@@ -20,13 +20,17 @@ class CircleMoveViewController: UIViewController {
     
     let circle = UIView()
     let circleSide = 15
-    let stepForCirle = 10
+    let stepForCirle = 15
     var position: (x: Int, y: Int) = (0, 0)
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        swipeDirection(direction: .right)
+        swipeDirection(direction: .down)
+        swipeDirection(direction: .up)
+        swipeDirection(direction: .left)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -42,7 +46,7 @@ class CircleMoveViewController: UIViewController {
     }
     
     @IBAction func upPressed(_ sender: UIButton) {
-        if border(direction: .up) < 0 { return }
+        if border(direction: .up) < Int(view.safeAreaInsets.top) { return }
         circle.frame.origin.y -= CGFloat(stepForCirle)
     }
     
@@ -68,9 +72,30 @@ class CircleMoveViewController: UIViewController {
         case .left:
             return Int(circle.frame.origin.x) - stepForCirle - circleSide
         case .up:
-            return Int(circle.frame.origin.y) - stepForCirle - circleSide
+            return Int(circle.frame.origin.y) - stepForCirle
         case .down:
-            return Int(circle.frame.origin.y) + stepForCirle + circleSide
+            return Int(circle.frame.origin.y) + stepForCirle
+        }
+    }
+    
+    func swipeDirection(direction: Direction) {
+        switch direction {
+        case .right:
+            let gestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(rightPressed))
+            gestureRecognizer.direction = .right
+            view.addGestureRecognizer(gestureRecognizer)
+        case .left:
+            let gestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(leftPressed))
+            gestureRecognizer.direction = .left
+            view.addGestureRecognizer(gestureRecognizer)
+        case .up:
+            let gestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(upPressed))
+            gestureRecognizer.direction = .up
+            view.addGestureRecognizer(gestureRecognizer)
+        case .down:
+            let gestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(downPressed))
+            gestureRecognizer.direction = .down
+            view.addGestureRecognizer(gestureRecognizer)
         }
     }
 
