@@ -14,6 +14,11 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func showCircleButtonPressed(_ sender: UIButton) {
+        let controller = storyboard?.instantiateViewController(withIdentifier: "ShowCircleOnTapViewController") as! ShowCircleOnTapViewController
+        controller.modalPresentationStyle = .fullScreen
+        present(controller, animated: true, completion: nil)
+    }
+    
 }
 

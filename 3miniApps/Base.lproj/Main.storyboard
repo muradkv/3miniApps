@@ -17,10 +17,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="Ci6-1K-GIc">
-                                <rect key="frame" x="60.5" y="569" width="293" height="223"/>
+                                <rect key="frame" x="60.5" y="483" width="293" height="309"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tCT-HW-ai8">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SUp-Y8-ryU">
                                         <rect key="frame" x="0.0" y="0.0" width="293" height="51"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Show Circle on Tap">
+                                            <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="showCircleButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nmH-BQ-vjp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tCT-HW-ai8">
+                                        <rect key="frame" x="0.0" y="86" width="293" height="51"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Fill view with Square">
                                             <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
@@ -30,7 +40,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4xu-wH-gPk">
-                                        <rect key="frame" x="0.0" y="86" width="293" height="51"/>
+                                        <rect key="frame" x="0.0" y="172" width="293" height="51"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Circle Мove">
                                             <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
@@ -40,7 +50,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgV-Iv-fvc">
-                                        <rect key="frame" x="0.0" y="172" width="293" height="51"/>
+                                        <rect key="frame" x="0.0" y="258" width="293" height="51"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Circle Cat">
                                             <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
@@ -63,6 +73,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-474" y="737"/>
+        </scene>
+        <!--Show Circle On Tap View Controller-->
+        <scene sceneID="oPh-os-hwW">
+            <objects>
+                <viewController storyboardIdentifier="ShowCircleOnTapViewController" id="ZAn-Rp-a4M" customClass="ShowCircleOnTapViewController" customModule="_miniApps" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tuQ-Xc-G9X">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="yAH-JK-Gpy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ICt-by-u3M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-475" y="1474"/>
         </scene>
         <!--Circle Cat View Controller-->
         <scene sceneID="hbe-G6-QiI">
